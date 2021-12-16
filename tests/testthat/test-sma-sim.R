@@ -10,9 +10,11 @@ warmup <- 100
 P <- ts(pmax(rnorm(200), 0))
 E <- ts(20 + 10 * cos((1:200) / 20))
 Q <- P * E * runif(P)
+Temp <- ts(10 + 15 * cos((1:200) / 20))
 DATA <- cbind(P = P, E = E)
 DATAE <- DATA
 DATAE[, "E"] <- scale(DATAE[, "E"]) * 2
+DATATE <- cbind(P = P, E = E * 0.5, T = Temp)
 ## some SMAs require Q also in simulation
 DATAQ <- cbind(P = P, Q = Q)
 
@@ -54,7 +56,10 @@ with_parameters_test_that(
     `sma = "awbm"` = list(mod = hydromad(DATA, sma = "awbm")),
     `sma = "simhyd"` = list(mod = hydromad(DATA, sma = "simhyd")),
     `sma = "sacramento"` = list(mod = hydromad(DATA, sma = "sacramento")),
-    `sma = "snow"` = list(mod = hydromad(DATAE, sma = "snow"))
+    `sma = "snow"` = list(mod = hydromad(DATAE, sma = "snow")),
+    `sma = "hbv"` = list(mod = hydromad(DATATE,
+      sma = "hbv", routing = "hbvrouting"
+    ))
   )
 )
 

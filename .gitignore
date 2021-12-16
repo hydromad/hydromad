@@ -13,7 +13,7 @@ hydromad.Rproject
 docs/.DS_Store
 .Rproj.user
 .RData
-src/RcppExports.cpp
-R/RcppExports.R
 src/hydromad.so
 web/docs
+doc
+Meta
