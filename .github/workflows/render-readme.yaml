@@ -5,6 +5,9 @@ on:
 
 name: Render README
 
+env:
+  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   render:
     name: Render README
