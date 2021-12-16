@@ -25,7 +25,7 @@ with_parameters_test_that(
     set.seed(0)
     n_iter <- 5
     for (mod in simulate(mod, n_iter)) {
-      if (test_name == "sma = \"gr4j\"") {
+      if (.test_name == "sma = \"gr4j\"") {
         Csim <- na.trim(predict(mod))
         expect_true(all(Csim >= 0))
         hydromad.options(pure.R.code = TRUE)
