@@ -1,8 +1,8 @@
 Package: hydromad
-Version: 0.9-26
-Date: 2018-07-01
+Version: 0.9-27
+Date: 2021-12-16
 Title: Hydrological Model Assessment and Development
-Author: Felix Andrews <felix@nfrac.org>, Joseph Guillaume <josephguillaume@gmail.com>
+Author: Felix Andrews <felix@nfrac.org>, Joseph Guillaume <josephguillaume@gmail.com>, Willem Vervoort <willemvervoort@gmail.com>, Alex Buzacott <abuz5257@uni.sydney.edu.au>
 Maintainer: Joseph Guillaume <josephguillaume@gmail.com>
 Description: A modelling framework for environmental hydrology: water 
   balance accounting and flow routing in spatially aggregated catchments. 
